@@ -4,6 +4,8 @@ This is not fully functioning yet sorry :(
 
 # Screenshot
 
+<img width="1221" alt="Screen Shot 2023-02-08 at 7 10 30 PM" src="https://user-images.githubusercontent.com/118778670/217699900-5bbc0421-e0e4-4a44-9e55-18149903944e.png">
+
 
 # link
 
