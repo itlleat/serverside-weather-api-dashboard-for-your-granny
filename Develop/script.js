@@ -1,36 +1,6 @@
-// var searchFormEl = document.querySelector('#search-component');
-
-// function handleSearchFormSubmit(event) {
-//   event.preventDefault();
-
-//   var searchInputVal = document.querySelector('#search-input').value;
-//   var formatInputVal = document.querySelector('#format-input').value;
-
-//   if (!searchInputVal) {
-//     console.error('You need a search input value!');
-//     return;
-//   }
-
-//   var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
-
-//   location.assign(queryString);
-// }
-
-// searchFormEl.addEventListener('submit', handleSearchFormSubmit);
-
-// var weatherResultsEl = document.querySelector('weather-results');
-// var aTemp = document.getElementById('aTemp');
-// var aWin = document.getElementById('aWin');
-// var aHum = document.getElementById('aHum');
-// var currentWeather = document.getElementById('current-weather');
-// var zTemp = document.getElementById('zTemp');
-// var zWin = document.getElementById('zWin');
-// var zHum = document.getElementById('zHum');
-// const weatherIcon = document.getElementById('');
-
 const searchButton = document.querySelector('#city-name');
 const submit = document.querySelector('#submit');
-const fiveDayForecast = document.querySelector('fieve-day');
+const fiveDayForecast = document.querySelector('.five-day');
 const key = 'af61749fac48e55f7ab09b69b235d6e9';
 const todayEl = document.getElementById('today')
 const todayDate = dayjs().format('MMMM DD, YYYY');
@@ -38,16 +8,16 @@ const temp = document.getElementById('temp');
 const wind = document.getElementById('wind');
 const humidity = document.getElementById('humidity');
 const condition = document.getElementById('condition');
-const searchedCity = document.querySelector('.searched-cities');
+var searchedCity = document.querySelector('.searched-cities');
 const futureTemp = document.querySelector('.future-temp');
-const foreCastOne = document.querySelector('future-dateOne');
-const foreCastTwo = document.querySelector('future-dateOne');
-const foreCastThree = document.querySelector('future-dateOne');
-const foreCastFour = document.querySelector('future-dateOne');
-const foreCastFive = document.querySelector('future-dateOne');
+const foreCastOne = document.querySelector('.future-date-one');
+const foreCastTwo = document.querySelector('.future-date-two');
+const foreCastThree = document.querySelector('.future-date-three');
+const foreCastFour = document.querySelector('.future-date-four');
+const foreCastFive = document.querySelector('.future-date-five');
 const today = dayjs()
-const nextDay = [];
-const searched = [];
+var nextDay = [];
+var searched = [];
 
 // Pull searched cities from local storage to create list
 function init() {
@@ -57,7 +27,7 @@ function init() {
     searched = savedCities;
     console.log(searched);
   }
-  searchedCities.textContent = "";
+  searchedCity.textContent = "";
 
   for (let i = 0; i < searched.length; i++) {
     var city = searched[i];
@@ -87,12 +57,12 @@ function init() {
 // Event listener to add searched cities to local storage
 submit.addEventListener("click", function (event) {
   event.preventDefault();
-  var city = searchButton.value.trim();
-  if (city === "") {
+  var cityName = searchButton.value.trim();
+  if (cityName === "") {
     return;
   }
-  getApiCity(city);
-  searched.push(city);
+  getApiCity(cityName);
+  searched.push(cityName);
   searchButton.value = "";
   localStorage.setItem("searched", JSON.stringify(searched));
   init();
@@ -104,18 +74,19 @@ function getApiCity(cityName) {
     document.images[i].parentNode.removeChild(document.images[i]);
   }
   console.log(cityName);
-  var currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`;
+  var currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=' + key + '&units=imperial';
 
   for (let i = 0; i <= 5; i++) {
     let tomorrow = dayjs(today).add(i, "day");
     nextDay.push(tomorrow.format("MMMM DD, YYYY"));
   }
-  futureDate1.textContent = nextDay[1];
-  futureDate2.textContent = nextDay[2];
-  futureDate3.textContent = nextDay[3];
-  futureDate4.textContent = nextDay[4];
-  futureDate5.textContent = nextDay[5];
+  foreCastOne.textContent = nextDay[1];
+  foreCastTwo.textContent = nextDay[2];
+  foreCastThree.textContent = nextDay[3];
+  foreCastFour.textContent = nextDay[4];
+  foreCastFive.textContent = nextDay[5];
   console.log(nextDay);
+  console.log(data);
 
   // Pull current weather from API
   fetch(currentWeatherUrl)
@@ -123,15 +94,18 @@ function getApiCity(cityName) {
       console.log(response);
       return response.json();
     })
+
+    //script.js:99 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'temp')
+    // at script.js:99:39
     .then(function (data) {
       console.log(data);
-      todayEl.textContent = `${cityName}  (${todaysDate})`;
+      todayEl.textContent = `${cityName}  (${todayDate})`;
       temp.textContent = `${data.main.temp} °F`;
       wind.textContent = `${data.wind.speed} MPH`;
       humidity.textContent = `${data.main.humidity}%`;
 
-      var iconCode = data.weather[0].icon;
-      var image = document.createElement("img");
+      const iconCode = data.weather[0].icon;
+      const image = document.createElement("img");
       image.setAttribute(
         "src",
         "https://openweathermap.org/img/wn/" + iconCode + ".png"
@@ -140,7 +114,7 @@ function getApiCity(cityName) {
       condition.append(image);
 
       // Pull 5 day forecast from API
-      const futureWeatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=imperial`;
+      const futureWeatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${key}&units=imperial`;
 
       fetch(futureWeatherURL)
         .then(function (response) {
