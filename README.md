@@ -1,5 +1,16 @@
 # serverside-weather-api-dashboard-for-your-granny
 
+This is not fully functioning yet sorry :(
+
+# Screenshot
+
+<img width="1221" alt="Screen Shot 2023-02-08 at 7 10 30 PM" src="https://user-images.githubusercontent.com/118778670/217699900-5bbc0421-e0e4-4a44-9e55-18149903944e.png">
+
+
+# link
+
+https://itlleat.github.io/serverside-weather-api-dashboard-for-your-granny/
+
 Your Task
 Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
