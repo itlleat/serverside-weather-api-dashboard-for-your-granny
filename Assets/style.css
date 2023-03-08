@@ -20,8 +20,18 @@
   background-color: purple;
 } */
 
+header {
+  /* justify-content: center; */
+  text-align: center;
+}
+
+#search-bar {
+  background: linear-gradient(to top, whitesmoke, rgb(34, 189, 255));
+}
+
+
 body {
-    font-family: 'Fira Sans', sans-serif;
+    background: linear-gradient(to bottom, whitesmoke, rgb(34, 189, 255));
   }
   
   h1,
@@ -30,6 +40,66 @@ body {
   h4,
   h5,
   h6 {
-    font-family: 'Merriweather', serif;
     font-weight: 700;
+  }
+
+  @media (min-width: 1200px) {
+    .display-1 {
+      font-size: 5rem;
+    }
+  }
+  
+  .display-2 {
+    font-size: calc(1.575rem + 3.9vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  @media (min-width: 1200px) {
+    .display-2 {
+      font-size: 4.5rem;
+    }
+  }
+  
+  .display-3 {
+    font-size: calc(1.525rem + 3.3vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  @media (min-width: 1200px) {
+    .display-3 {
+      font-size: 4rem;
+    }
+  }
+  
+  .display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  @media (min-width: 1200px) {
+    .display-4 {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .display-5 {
+    font-size: calc(1.425rem + 2.1vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  @media (min-width: 1200px) {
+    .display-5 {
+      font-size: 3rem;
+    }
+  }
+  
+  .display-6 {
+    font-size: calc(1.375rem + 1.5vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  @media (min-width: 1200px) {
+    .display-6 {
+      font-size: 2.5rem;
+    }
   }

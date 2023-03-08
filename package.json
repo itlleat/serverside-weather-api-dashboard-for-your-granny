@@ -1,0 +1,19 @@
+{
+  "name": "serverside-weather-api-dashboard-for-your-granny",
+  "version": "1.0.0",
+  "description": "serverside 5 day forecast app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itlleat/serverside-weather-api-dashboard-for-your-granny.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itlleat/serverside-weather-api-dashboard-for-your-granny/issues"
+  },
+  "homepage": "https://github.com/itlleat/serverside-weather-api-dashboard-for-your-granny#readme"
+}
