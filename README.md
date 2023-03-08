@@ -1,96 +1,55 @@
-# serverside-weather-api-dashboard-for-your-granny
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT "Click to view the MIT License on opensource.org")
 
-This is not fully functioning yet sorry :(
+# Server Side Weather API Dashboard For Your Granny
 
-# Screenshot
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+  <li><a href="#project-description">Project Description</a></li>
+  <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage-information">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#test-instructions">Testing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#questions">Questions</a></li>
+  </ol>
+</details>
 
-<img width="1221" alt="Screen Shot 2023-02-08 at 7 10 30 PM" src="https://user-images.githubusercontent.com/118778670/217699900-5bbc0421-e0e4-4a44-9e55-18149903944e.png">
+## Project Description
+ 
+Welcome! This is a simple Web Application that allows you to enter the name of a city in the search bar and have the current date with weather information displayed and a five day forecast for the chosen city. The page will save the cities you've already searched and you can click on them to fetch the info again. The current and 5 day forecast will also display a weather badge icon reflecting the weather on that day. 
+
+### Screenshot
+
+<img width="818" alt="commander-shape-screenshot" src="https://user-images.githubusercontent.com/118778670/223336467-a69d672d-4f15-4487-9f39-ed21d241b20b.png">
+
+## Installation
+
+No need to install. Just go to the link for the deployed site.
 
 
-# link
+## Usage Information
 
-https://itlleat.github.io/serverside-weather-api-dashboard-for-your-granny/
+This app uses dayjs to retrieve the weather data. Using the app is described in the project description.
 
-Your Task
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+## Contributing
 
-Use the 5 Day Weather Forecast to retrieve weather data for cities. The base URL should look like the following: https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}. After registering for a new API key, you may need to wait up to 2 hours for that API key to activate.
+### Guidelines
 
-Hint: Using the 5 Day Weather Forecast API, you'll notice that you will need to pass in coordinates instead of just a city name. Using the OpenWeatherMap APIs, how could we retrieve geographical coordinates given a city name?
+Please feel welcome to make additions, edit or expand it for your own personal use, or add pseudo code suggestions. If you'd like to make changes to the main branch please let me know through email.
 
-You will use localStorage to store any persistent data. For more information on how to work with the OpenWeather API, refer to the Full-Stack Blog on how to use API keys.
+## Test Instructions
 
-User Story
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-Acceptance Criteria
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-Mock-Up
-The following image shows the web application's appearance and functionality:
+Open the site, enter a city and search for it. The current weather along with a five day forecast should display. 
 
-The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.
+## License
 
-Grading Requirements
-Note: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT "Click to view the MIT License on opensource.org")
 
-A repository that has no code
+## Questions
 
-A repository that includes a unique name but nothing else
+### Please reach out via the links below to reach me with additional questions.
 
-A repository that includes only a README file but nothing else
+#### https://github.com/itlleat
 
-A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-Technical Acceptance Criteria: 40%
-Satisfies all of the above acceptance criteria plus the following:
-
-Uses the OpenWeather API to retrieve weather data.
-
-Uses localStorage to store persistent data.
-
-Deployment: 32%
-Application deployed at live URL.
-
-Application loads with no errors.
-
-Application GitHub URL submitted.
-
-GitHub repository that contains application code.
-
-Application Quality: 15%
-Application user experience is intuitive and easy to navigate.
-
-Application user interface style is clean and polished.
-
-Application resembles the mock-up functionality provided in the Challenge instructions.
-
-Repository Quality: 13%
-Repository has a unique name.
-
-Repository follows best practices for file structure and naming conventions.
-
-Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-Repository contains multiple descriptive commit messages.
-
-Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-Review
-You are required to submit BOTH of the following for review:
-
-The URL of the functional, deployed application.
-
-The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+#### scott.schulman84@gmail.com
