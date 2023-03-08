@@ -2,6 +2,8 @@
 
 # Server Side Weather API Dashboard For Your Granny
 
+https://itlleat.github.io/serverside-weather-api-dashboard-for-your-granny/
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
