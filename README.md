@@ -21,7 +21,7 @@ Welcome! This is a simple Web Application that allows you to enter the name of a
 
 ### Screenshot
 
-<img width="818" alt="commander-shape-screenshot" src="https://user-images.githubusercontent.com/118778670/223336467-a69d672d-4f15-4487-9f39-ed21d241b20b.png">
+<img width="1274" alt="Screen Shot 2023-03-08 at 4 34 31 PM" src="https://user-images.githubusercontent.com/118778670/223879464-c0f483e3-54d7-4d59-b9e8-7c2c9df7950d.png">
 
 ## Installation
 
