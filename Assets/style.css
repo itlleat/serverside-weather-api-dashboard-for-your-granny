@@ -1,27 +1,4 @@
-/* ion-icon {
-    color:whitesmoke;
-    --ionicon-stroke-width: 80px;
-  }
-
-.green{
-  background-color: green;
-}
-.yellow{
-  background-color: yellow;
-}
-.orange{
-  background-color: orange;
-}
-.red{
-  background-color: red;
-}
-
-.purple{
-  background-color: purple;
-} */
-
 header {
-  /* justify-content: center; */
   text-align: center;
 }
 
@@ -29,6 +6,9 @@ header {
   background: linear-gradient(to top, whitesmoke, rgb(34, 189, 255));
 }
 
+.list-group {
+  background: linear-gradient(to bottom,whitesmoke, rgb(255, 146, 68));
+}
 
 body {
     background: linear-gradient(to bottom, whitesmoke, rgb(34, 189, 255));
@@ -41,6 +21,10 @@ body {
   h5,
   h6 {
     font-weight: 700;
+  }
+
+  footer {
+    background: linear-gradient(to top,  whitesmoke, rgb(34, 189, 255));
   }
 
   @media (min-width: 1200px) {

@@ -1,123 +1,10 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Server Side 5 Day Weather Forecast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
-    rel="stylesheet" />
-    <link rel="stylesheet" href="./Assets/jass.css" />
-    <link rel="stylesheet" href="./Assets/style.css" />
-</head>
-
-<body>
-
-  <header id="header">
-    <h1 class="p-3">Weather Dashboard</h1>
-  </header> -->
-  <!-- Search Container -->
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col">
-        <h3>Search for a City:</h3>
-        <form id="user-form" class="card-body">
-          <input id="city-name" type="text" autofocus="true" />
-          <button id="submit" class="search">Search</button>
-        </form>
-        <div class="col-12 col-md-8">
-          <h3 class="searched-cities"></h3>
-          <div id="city-container" class="list-group"></div>
-        </div>
-      </div> -->
-      <!-- Current Weather -->
-      <!-- <div class="col-9">
-        <h3 class="border border-primary-subtle border-3 p-3">
-          <p id="today"></p>
-          <p><span id="condition"></span></p>
-          <p>Temp: <span id="temp"></span></p>
-          <p>Wind: <span id="wind"></span></p>
-          <p>Humidity <span id="humidity"></span></p>
-        </h3>
-
-    <div class="row forecast">
-      <div class="container">
-        <h3>5 Day Forecast</h3>
-        <div id="five-day" class="row align-items-center">
-          <div class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle">
-           <p class="future-date-one"></p>
-           <p class="weather-icon-one"></p> 
-           <p class="future-temp-one">Temp:</p>
-           <p class="future-wind-one">Wind:</p>
-           <p class="future-humidity-one">Humidity:</p>
-          </div>
-          <div class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle">
-            <p class="future-date-two"></p>
-            <p class="weather-icon-two"></p> 
-            <p class="future-temp-two">Temp:</p>
-            <p class="future-wind-two">Wind:</p>
-            <p class="future-humidity-two">Humidity:</p>
-           </div>
-           <div class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle">
-            <p class="future-date-three"></p>
-            <p class="weather-icon-three"></p> 
-            <p class="future-temp-three">Temp:</p>
-            <p class="future-wind-three">Wind:</p>
-            <p class="future-humidity-three">Humidity:</p>
-           </div>
-           <div class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle">
-            <p class="future-date-four"></p>
-            <p class="weather-icon-four"></p> 
-            <p class="future-temp-four">Temp:</p>
-            <p class="future-wind-four">Wind:</p>
-            <p class="future-humidity-four">Humidity:</p>
-           </div>
-           <div class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle">
-            <p class="future-date-five"></p>
-            <p class="weather-icon-five"></p> 
-            <p class="future-temp-five">Temp:</p>
-            <p class="future-wind-five">Wind:</p>
-            <p class="future-humidity-five">Humidity:</p>
-           </div>
-        </div>
-      </div>
-    </div>
-    
-    
-    <div id="weather-results" class="list-group">
-        <div>
-                <p>Temp: <span id="aTemp"></span></p>
-                <p>Wind: <span id="aWin"></span></p>
-                <p>Humidity: <span id="aHum"></span></p>
-            <h1 id="temp"></h1>
-            <div id="location"></div>
-        </div>
-    <div>
-
-
-
-    <div class="col-12 col-md-9 p-3 text-light">
-      <h2>Showing results for <span id="result-text"></span></h2>
-      <div id="result-content"></div>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.5/dayjs.min.js" integrity="sha512-Ot7ArUEhJDU0cwoBNNnWe487kjL5wAOsIYig8llY/l0P2TUFwgsAHVmrZMHsT8NGo+HwkjTJsNErS6QqIkBxDw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./Develop/script.js"></script>
-</body>
-
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>5 Day Weather Forecast</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -134,40 +21,35 @@
   </header>
   
   <body>
-    <!-- Header  -->
-    <!-- <header id="header">
-      <h1 class="p-3">Weather Dashboard</h1>
-    </header> -->
-    <!-- Search Container -->
-    <div class="container">
-      <div class="row" id="search-bar">
+    <div class="container border-top rounded">
+      <div class="row border-top rounded" id="search-bar">
         <div class="col">
           <h3>Search for a City:</h3>
-          <form id="user-form" class="card-body">
+          <form id="user-form" class="card-body rounded">
             <input id="city-name" type="text" autofocus="true" />
-            <button id="submit" class="search">Search</button>
+            <button id="submit" class="search rounded">Search</button>
           </form>
-          <div class="col-12 col-md-8">
-            <h3 class="searched-cities"></h3>
-            <div id="city-container" class="list-group"></div>
+          <div class="col-12 col-md-8 rounded">
+            <h3 class="searched-cities rounded"></h3>
+            <div id="city-container" class="list-group rounded"></div>
           </div>
         </div>
         <!-- Current Weather -->
         <div class="col-9">
-          <h3 class="border border-primary-subtle border-3 p-3">
+          <h3 class="border border-primary-light border-3 p-3 rounded">
             <p id="today"></p>
             <p><span id="condition"></span></p>
             <p>Temp: <span id="temp"></span></p>
             <p>Wind: <span id="wind"></span></p>
-            <p>Humidity <span id="humidity"></span></p>
+            <p>Humidity: <span id="humidity"></span></p>
           </h3>
           <!-- Five Day Forecast -->
-          <div class="row forecast">
+          <div class="row forecast border-top rounded">
             <div class="container">
               <h3>5 day Forecast</h3>
               <div id="five-day" class="row align-items-center">
                 <div
-                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle"
+                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded"
                 >
                   <p class="future-date1"></p>
                   <p class="weather-icon1"></p>
@@ -176,7 +58,7 @@
                   <p class="future-humidity1">Humidity:</p>
                 </div>
                 <div
-                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle"
+                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded"
                 >
                   <p class="future-date2"></p>
                   <p class="weather-icon2"></p>
@@ -185,7 +67,7 @@
                   <p class="future-humidity2">Humidity</p>
                 </div>
                 <div
-                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle"
+                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded"
                 >
                   <p class="future-date3"></p>
                   <p class="weather-icon3"></p>
@@ -194,7 +76,7 @@
                   <p class="future-humidity3">Humidity</p>
                 </div>
                 <div
-                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle"
+                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded"
                 >
                   <p class="future-date4"></p>
                   <p class="weather-icon4"></p>
@@ -203,7 +85,7 @@
                   <p class="future-humidity4">Humidity</p>
                 </div>
                 <div
-                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle"
+                  class="col m-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded"
                 >
                   <p class="future-date5"></p>
                   <p class="weather-icon5"></p>
@@ -218,8 +100,8 @@
       </div>
     </div>
 
-    <footer class="bg-light py-5">
-      <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Thanks for looking!</div></div>
+    <footer class="bg-light py-5 border-top rounded">
+      <div class="container px-4 px-lg-5 rounded"><div class="small text-center text-muted">Thanks for looking!</div></div>
   </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
